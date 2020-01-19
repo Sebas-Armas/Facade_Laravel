@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/Imprimir', function(){
+    return view('TextoImprimir');
+});
+
+Route::post('/Muestra', 'FacadeController@Imprimir')->name('imprimir');
